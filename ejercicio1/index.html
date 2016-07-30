@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
+<body>
+     <div ng-app>
+        <p><input type="text" placeholder="First Name" ng-model="first_name" /></p>
+        <p><input type="text" placeholder="Last Name" ng-model="last_name" /></p>
+        <p><input type="text" placeholder="Phone" ng-model="phone" /></p>
+        <p>Nombre: <span ng-bind="first_name"></span></p>
+        <p>Apellido: <span ng-bind="last_name"></span></p>
+        <p>Telefono: <span ng-bind="phone"></span></p>
+    </div>
+</body>
+</html>

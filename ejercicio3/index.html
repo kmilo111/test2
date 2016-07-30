@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="appController" >
+     <p><input type="number" placeholder="Numero 1" ng-model="a" /></p>
+     <p><input type="number" placeholder="Numero 2" ng-model="b" /></p>
+     <!--<p><span ng-model="result">{{a+b}}</span></p>
+     <p><input type="text" value={{a+b}} /></p>-->
+     <input type="text" ng-model="result" />
+     <br><br>
+     <button ng-click="suma()" >Sumar</button>
+      <button ng-click="restar()" >Restar</button>
+     <button ng-click="multiplicar()" >Multiplicar</button>
+     <button ng-click="dividir()" >Dividir</button>
+   </div> 
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript">
+	angular.module('app', [])
+		   .controller('appController', function($scope){
+               $scope.suma = function(){
+                    $scope.result = $scope.a + $scope.b;
+		   		};
+
+                $scope.restar = function(){
+                    $scope.result = $scope.a - $scope.b;
+		   		};
+
+                $scope.multiplicar = function(){
+                    $scope.result = $scope.a * $scope.b;
+		   		};
+
+                $scope.dividir = function(){
+                    $scope.result = $scope.a / $scope.b;
+		   		};
+		   });
+
+	</script>
+</body>
+</html>
